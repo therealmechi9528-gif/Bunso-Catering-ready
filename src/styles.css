@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { scroll-behavior: smooth; }
+body { margin: 0; font-family: Manrope, sans-serif; background: #0a0a09; }
+::selection { background: #c6a15b; color: #0a0a09; }
+@layer components {
+  .nav-link { @apply text-[10px] font-bold uppercase tracking-luxe text-white/80 transition hover:text-gold; }
+  .gold-button { @apply inline-flex items-center justify-center gap-3 bg-gold text-[10px] font-bold uppercase tracking-luxe text-ink transition hover:bg-[#dfc17f]; }
+  .outline-button { @apply inline-flex items-center gap-3 border-b border-gold pb-2 text-[10px] font-bold uppercase tracking-luxe transition hover:text-gold; }
+  .hero-control { @apply grid h-9 w-9 place-items-center border border-white/30 text-white transition hover:border-gold hover:text-gold; }
+  .gallery-item { @apply relative h-52 overflow-hidden text-white md:h-auto; }
+  .gallery-overlay { @apply absolute inset-0 grid place-items-center bg-black/0 opacity-0 transition duration-300 hover:bg-black/40 hover:opacity-100; }
+  .form-label { @apply text-[10px] font-bold uppercase tracking-luxe text-white/60; }
+  .form-input { @apply mt-3 block w-full border-0 border-b border-white/25 bg-transparent px-0 py-3 text-sm normal-case tracking-normal text-white outline-none transition placeholder:text-white/25 focus:border-gold; }
+  .form-input option { @apply bg-ink; }
+  .footer-title { @apply mb-3 text-[10px] font-bold uppercase tracking-luxe text-gold; }
+  .footer-text { @apply text-xs leading-6 text-white/55; }
+  .messenger { @apply fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#0084ff] text-white shadow-xl transition hover:scale-105; }
+}
